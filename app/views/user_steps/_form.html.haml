@@ -1,0 +1,10 @@
+= simple_form_for @user, url:wizard_path do |f|
+  = f.error_notification
+
+  .form-inputs
+    = yield f
+
+  .form-actions
+    = f.button :submit, 'Continue'
+    = link_to 'Back', previous_wizard_path, class:'btn btn-primary'
+    = link_to 'Skip', next_wizard_path, class:'btn btn-primary'

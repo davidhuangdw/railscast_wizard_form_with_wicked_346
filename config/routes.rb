@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+  resources :user_steps
   resources :users
   resources :sessions, only:[:new, :create, :destroy]
   get '/signup' => 'users#new', as: 'signup'
