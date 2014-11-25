@@ -10,6 +10,7 @@ class UserStepsController < ApplicationController
   def update
     @user = current_user
     @user.attributes = user_params
+    @user[:status] = step.to_s
     render_wizard @user
   end
 
